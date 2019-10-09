@@ -32,12 +32,12 @@ def lucky_ticket(ticket_number):
     if len(str_ticket) == 6:
         sp = [int(str_ticket[0]), int(str_ticket[1]), int(str_ticket[2]), int(str_ticket[3]), int(str_ticket[4]), int(str_ticket[5])]
         if sp[0] + sp [1] + sp[2] == sp [3] + sp[4] + sp[5]:
-            luck = "Билет счастливый"
+            luck = "Билет счастливый."
         else:
-            luck = "Билет не счастливый"
+            luck = "Билет не счастливый."
 
     else:
-        luck = "Билет не счастливый"
+        luck = "Билет не счастливый."
     return (luck)
 
 print(lucky_ticket(123006))
