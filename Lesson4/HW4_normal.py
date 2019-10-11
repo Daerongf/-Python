@@ -67,6 +67,15 @@ line_2 = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysm'\
 
 str2 = re.findall(r'[a-z|а-я]{2}([A-Z|А-Я]+)[A-Z|А-Я]{2}', line_2)
 print(str2)
+# print()
+print("Если ровно два символа слева регулярным выражением:")
+
+if line_2[0].isupper():
+       str2 = re.findall(r'[A-Z|А-Я][a-z|а-я]{2}([A-Z|А-Я]+)[A-Z|А-Я]{2}', line_2)
+else:
+       str2 = str2 = re.findall(r'^[a-z|а-я]{2}([A-Z|А-Я]+)[A-Z|А-Я]{2}', line_2) + \
+                     re.findall(r'[A-Z|А-Я][a-z|а-я]{2}([A-Z|А-Я]+)[A-Z|А-Я]{2}', line_2)
+print(str2)
 
 task2 = []
 task22 = []
